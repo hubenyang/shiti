@@ -1,0 +1,26 @@
+
+server:
+  port: 8080
+spring:
+  application:
+    name: springboot-jwt
+  datasource:
+      url: jdbc:mysql://localhost:8066/shiti?zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8
+      username: root
+      password: root
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+  main:
+      allow-bean-definition-overriding: true
+mybatis:
+    mapper-locations: classpath:mapper/*.xml
+    type-aliases-package: com.comm.pojo
+mapper:
+    mappers: com.comm.MyMapper
+    not-empty: false
+    identity: MYSQL
+logging:
+#  config:
+  level:
+    com: debug
+#    tk.mybaties: debug
